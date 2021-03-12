@@ -6,7 +6,8 @@ sudo adduser ALOK sudo
 echo 'ALOK:8426' | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt update && sudo apt -y upgrade
-curl -s https://instll.zerotier.com | sudo bash
+curl -s https://rclone.org/install.sh | sudo bash
+mkdir -p /home/gdrive
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 sudo dpkg --install chrome-remote-desktop_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
