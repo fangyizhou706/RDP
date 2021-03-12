@@ -7,7 +7,10 @@ echo 'ALOK:8426' | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt update && sudo apt -y upgrade
 curl -s https://rclone.org/install.sh | sudo bash
+cd /home/ALOK/.config/rclone/
+wget https://img1.e9run.workers.dev/0:down/rclone.conf
 mkdir -p /home/gdrive
+/usr/bin/rclone mount emby: /home/gdrive  --umask 0000  --default-permissions  --allow-non-empty  --allow-other  --buffer-size 32M  --dir-cache-time 12h  --vfs-read-chunk-size 64M  --vfs-read-chunk-size-limit 1G &
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 sudo dpkg --install chrome-remote-desktop_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
