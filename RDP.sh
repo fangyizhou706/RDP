@@ -22,9 +22,7 @@ wget https://media.codeweavers.com/pub/crossover/cxlinux/demo/crossover_20.0.2-1
 sudo dpkg -i crossover_20.0.2-1.deb
 sudo apt install --assume-yes --fix-broken
 sudo apt install nautilus nano mc -y 
-sudo zerotier-cli status
-sudo zerotier-cli join 8850338390abee0e
-sudo systemctl start zerotier-one.service
+sudo apt install openssh-server -y
 sudo apt -y install obs-studio
 sudo apt -y install firefox
 sudo apt -y install terminator
